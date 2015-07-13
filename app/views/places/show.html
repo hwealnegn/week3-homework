@@ -1,0 +1,16 @@
+<div>
+	<h2><%= @place.title %></h2>
+	<p>
+		<%= image_tag @place.photo_url, :width => "40%", :height => "40%" %>
+	</p>
+	<p>
+		<%= @place.description %>
+	</p>
+	<p>
+		Admission Price: <%= number_to_currency @place.admission_price %>
+	</p>
+	<p>
+		<%= @place.id %>
+		<%= link_to "Edit", "/places/#{place.id}/edit" %>
+	</p>
+</div>
