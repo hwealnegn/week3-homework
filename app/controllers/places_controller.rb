@@ -21,4 +21,14 @@ class PlacesController < ApplicationController #ActionController::Base
 	def edit
 		@place = Place.find_by(:id => params["id"])
 	end
+
+	def update
+		@place = Place.find_by(:id => params["id"])
+		@place.title = params["title"]
+		@place.photo_url = params["photo_url"]
+		@place.admission_price = params["admission_price"]
+		@place.description = params["description"]
+		@place.save
+		redirect_to "/places/#{@place.id}"
+	end
 end

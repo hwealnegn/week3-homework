@@ -7,10 +7,9 @@
 		<%= @place.description %>
 	</p>
 	<p>
-		Admission Price: <%= number_to_currency @place.admission_price %>
+		Admission Price: <%= number_to_currency @place.admission_price/100 %>
 	</p>
 	<p>
-		<%= @place.id %>
-		<%= link_to "Edit", "/places/#{place.id}/edit" %>
+		<%= link_to "Edit", "/places/#{@place.id}/edit" %>
 	</p>
 </div>
