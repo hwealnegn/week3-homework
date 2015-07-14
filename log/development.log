@@ -4851,3 +4851,1279 @@ Processing by PlacesController#index as HTML
   [1m[35mPlace Load (0.1ms)[0m  SELECT "places".* FROM "places"
   Rendered places/index.html within layouts/application (0.7ms)
 Completed 200 OK in 18ms (Views: 17.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 18:43:30 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (1.4ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html within layouts/application (7.2ms)
+Completed 200 OK in 81ms (Views: 51.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 18:43:52 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.1ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html within layouts/application (0.7ms)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/19" for 127.0.0.1 at 2015-07-13 18:43:53 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1[0m
+  Rendered places/show.html within layouts/application (13.6ms)
+Completed 200 OK in 41ms (Views: 34.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/19/edit" for 127.0.0.1 at 2015-07-13 18:43:54 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1
+  Rendered places/edit.html within layouts/application (0.7ms)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/update?title=Sun+Yat-Sen+Memorial+Hall&photo_url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fc%2Fce%2FSYS_Memorial_from_sky.jpg&description=This+is+a+description&admission_price=0" for 127.0.0.1 at 2015-07-13 18:43:58 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"title"=>"Sun Yat-Sen Memorial Hall", "photo_url"=>"https://upload.wikimedia.org/wikipedia/commons/c/ce/SYS_Memorial_from_sky.jpg", "description"=>"This is a description", "admission_price"=>"0", "id"=>"update"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 0 LIMIT 1[0m
+  Rendered places/show.html within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div>
+    2: 	<h2><%= @place.title %></h2>
+    3: 	<p>
+    4: 		<%= image_tag @place.photo_url, :width => "40%", :height => "40%" %>
+    5: 	</p>
+  app/views/places/show.html:2:in `_app_views_places_show_html___2952411316838464466_70207477646000'
+
+
+  Rendered /Users/hwang/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/hwang/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/hwang/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.2ms)
+
+
+Started GET "/places/update?title=Sun+Yat-Sen+Memorial+Hall&photo_url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fc%2Fce%2FSYS_Memorial_from_sky.jpg&description=This+is+a+description&admission_price=0" for 127.0.0.1 at 2015-07-13 18:44:59 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"title"=>"Sun Yat-Sen Memorial Hall", "photo_url"=>"https://upload.wikimedia.org/wikipedia/commons/c/ce/SYS_Memorial_from_sky.jpg", "description"=>"This is a description", "admission_price"=>"0", "id"=>"update"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 0 LIMIT 1
+  Rendered places/show.html within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div>
+    2: 	<h2><%= @place.title %></h2>
+    3: 	<p>
+    4: 		<%= image_tag @place.photo_url, :width => "40%", :height => "40%" %>
+    5: 	</p>
+  app/views/places/show.html:2:in `_app_views_places_show_html___2952411316838464466_70207477646000'
+
+
+  Rendered /Users/hwang/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/hwang/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/hwang/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.8ms)
+
+
+Started GET "/places/update?title=Sun+Yat-Sen+Memorial+Hall&photo_url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fc%2Fce%2FSYS_Memorial_from_sky.jpg&description=This+is+a+description&admission_price=0" for 127.0.0.1 at 2015-07-13 18:45:01 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"title"=>"Sun Yat-Sen Memorial Hall", "photo_url"=>"https://upload.wikimedia.org/wikipedia/commons/c/ce/SYS_Memorial_from_sky.jpg", "description"=>"This is a description", "admission_price"=>"0", "id"=>"update"}
+  [1m[36mPlace Load (0.3ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 0 LIMIT 1[0m
+  Rendered places/show.html within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div>
+    2: 	<h2><%= @place.title %></h2>
+    3: 	<p>
+    4: 		<%= image_tag @place.photo_url, :width => "40%", :height => "40%" %>
+    5: 	</p>
+  app/views/places/show.html:2:in `_app_views_places_show_html___2952411316838464466_70207477646000'
+
+
+  Rendered /Users/hwang/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/hwang/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/hwang/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 18:45:06 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html within layouts/application (1.4ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/19" for 127.0.0.1 at 2015-07-13 18:45:07 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1[0m
+  Rendered places/show.html within layouts/application (0.6ms)
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/19/edit" for 127.0.0.1 at 2015-07-13 18:45:08 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1
+  Rendered places/edit.html within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/?title=Sun+Yat-Sen+Memorial+Hall&photo_url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fc%2Fce%2FSYS_Memorial_from_sky.jpg&description=This+is+a+description&admission_price=0" for 127.0.0.1 at 2015-07-13 18:45:09 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"title"=>"Sun Yat-Sen Memorial Hall", "photo_url"=>"https://upload.wikimedia.org/wikipedia/commons/c/ce/SYS_Memorial_from_sky.jpg", "description"=>"This is a description", "admission_price"=>"0"}
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html within layouts/application (0.7ms)
+Completed 200 OK in 22ms (Views: 21.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/19" for 127.0.0.1 at 2015-07-13 18:45:11 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1
+  Rendered places/show.html within layouts/application (0.6ms)
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/19/edit" for 127.0.0.1 at 2015-07-13 18:45:12 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1[0m
+  Rendered places/edit.html within layouts/application (0.1ms)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/?title=Sun+Yat-Sen+Memorial+Hall&photo_url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fc%2Fce%2FSYS_Memorial_from_sky.jpg&description=This+is+a+description&admission_price=0" for 127.0.0.1 at 2015-07-13 18:45:47 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"title"=>"Sun Yat-Sen Memorial Hall", "photo_url"=>"https://upload.wikimedia.org/wikipedia/commons/c/ce/SYS_Memorial_from_sky.jpg", "description"=>"This is a description", "admission_price"=>"0"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html within layouts/application (0.7ms)
+Completed 200 OK in 24ms (Views: 23.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/19" for 127.0.0.1 at 2015-07-13 18:45:50 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1[0m
+  Rendered places/show.html within layouts/application (0.5ms)
+Completed 200 OK in 17ms (Views: 16.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/19/edit" for 127.0.0.1 at 2015-07-13 18:45:51 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1
+  Rendered places/edit.html within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/?title=Sun+Yat-Sen+Memorial+Hall&photo_url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fc%2Fce%2FSYS_Memorial_from_sky.jpg&description=This+is+a+description&admission_price=0" for 127.0.0.1 at 2015-07-13 18:45:53 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"title"=>"Sun Yat-Sen Memorial Hall", "photo_url"=>"https://upload.wikimedia.org/wikipedia/commons/c/ce/SYS_Memorial_from_sky.jpg", "description"=>"This is a description", "admission_price"=>"0"}
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html within layouts/application (0.7ms)
+Completed 200 OK in 18ms (Views: 17.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/19" for 127.0.0.1 at 2015-07-13 18:47:02 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1
+  Rendered places/show.html within layouts/application (0.5ms)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/19/edit" for 127.0.0.1 at 2015-07-13 18:47:29 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1[0m
+  Rendered places/edit.html within layouts/application (0.4ms)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 18:57:54 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.1ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html within layouts/application (0.8ms)
+Completed 200 OK in 17ms (Views: 16.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/19" for 127.0.0.1 at 2015-07-13 18:57:55 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1[0m
+  Rendered places/show.html within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 18:58:00 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.1ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html within layouts/application (0.7ms)
+Completed 200 OK in 20ms (Views: 19.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/26" for 127.0.0.1 at 2015-07-13 18:58:03 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 26 LIMIT 1[0m
+  Rendered places/show.html within layouts/application (0.4ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 18:58:08 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.1ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html within layouts/application (0.8ms)
+Completed 200 OK in 21ms (Views: 20.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/19" for 127.0.0.1 at 2015-07-13 18:58:48 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1[0m
+  Rendered places/show.html within layouts/application (0.4ms)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/19/edit" for 127.0.0.1 at 2015-07-13 18:58:50 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1
+  Rendered places/edit.html within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/update?title=Sun+Yat-Sen+Memorial+Hall&photo_url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fc%2Fce%2FSYS_Memorial_from_sky.jpg&description=This+is+a+description&admission_price=0" for 127.0.0.1 at 2015-07-13 18:58:51 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"title"=>"Sun Yat-Sen Memorial Hall", "photo_url"=>"https://upload.wikimedia.org/wikipedia/commons/c/ce/SYS_Memorial_from_sky.jpg", "description"=>"This is a description", "admission_price"=>"0", "id"=>"update"}
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 0 LIMIT 1[0m
+  Rendered places/show.html within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div>
+    2: 	<h2><%= @place.title %></h2>
+    3: 	<p>
+    4: 		<%= image_tag @place.photo_url, :width => "40%", :height => "40%" %>
+    5: 	</p>
+  app/views/places/show.html:2:in `_app_views_places_show_html___2952411316838464466_70207477646000'
+
+
+  Rendered /Users/hwang/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/hwang/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/hwang/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.8ms)
+
+
+Started GET "/places/19/edit" for 127.0.0.1 at 2015-07-13 18:59:59 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1
+  Rendered places/edit.html within layouts/application (0.6ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/?title=Sun+Yat-Sen+Memorial+Hall&photo_url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fc%2Fce%2FSYS_Memorial_from_sky.jpg&description=This+is+a+description&admission_price=0" for 127.0.0.1 at 2015-07-13 19:00:04 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"title"=>"Sun Yat-Sen Memorial Hall", "photo_url"=>"https://upload.wikimedia.org/wikipedia/commons/c/ce/SYS_Memorial_from_sky.jpg", "description"=>"This is a description", "admission_price"=>"0"}
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html within layouts/application (0.7ms)
+Completed 200 OK in 21ms (Views: 20.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/19" for 127.0.0.1 at 2015-07-13 19:05:53 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1
+  Rendered places/show.html within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/19/edit" for 127.0.0.1 at 2015-07-13 19:05:54 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1[0m
+  Rendered places/edit.html within layouts/application (0.5ms)
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/:id/update?title=Sun+Yat-Sen+Memorial+Hall&photo_url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fc%2Fce%2FSYS_Memorial_from_sky.jpg&description=This+is+a+description&admission_price=0" for 127.0.0.1 at 2015-07-13 19:05:56 -0500
+Processing by PlacesController#update as HTML
+  Parameters: {"title"=>"Sun Yat-Sen Memorial Hall", "photo_url"=>"https://upload.wikimedia.org/wikipedia/commons/c/ce/SYS_Memorial_from_sky.jpg", "description"=>"This is a description", "admission_price"=>"0", "id"=>":id"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 0 LIMIT 1
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `title=' for nil:NilClass):
+  app/controllers/places_controller.rb:27:in `update'
+
+
+  Rendered /Users/hwang/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/hwang/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /Users/hwang/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/hwang/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (39.5ms)
+
+
+Started GET "/places/:id/update?title=Sun+Yat-Sen+Memorial+Hall&photo_url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fc%2Fce%2FSYS_Memorial_from_sky.jpg&description=This+is+a+description&admission_price=0" for 127.0.0.1 at 2015-07-13 19:06:18 -0500
+Processing by PlacesController#update as HTML
+  Parameters: {"title"=>"Sun Yat-Sen Memorial Hall", "photo_url"=>"https://upload.wikimedia.org/wikipedia/commons/c/ce/SYS_Memorial_from_sky.jpg", "description"=>"This is a description", "admission_price"=>"0", "id"=>":id"}
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 0 LIMIT 1[0m
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `title=' for nil:NilClass):
+  app/controllers/places_controller.rb:27:in `update'
+
+
+  Rendered /Users/hwang/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/hwang/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/hwang/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/hwang/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (49.5ms)
+
+
+Started GET "/places/19/edit" for 127.0.0.1 at 2015-07-13 19:06:21 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1
+  Rendered places/edit.html within layouts/application (0.5ms)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 19:06:27 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html within layouts/application (0.7ms)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/19" for 127.0.0.1 at 2015-07-13 19:06:28 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1
+  Rendered places/show.html within layouts/application (0.5ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/19/edit" for 127.0.0.1 at 2015-07-13 19:06:29 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1[0m
+  Rendered places/edit.html within layouts/application (0.7ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/?title=Sun+Yat-Sen+Memorial+Hall&photo_url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fc%2Fce%2FSYS_Memorial_from_sky.jpg&description=This+is+a+description&admission_price=0" for 127.0.0.1 at 2015-07-13 19:06:30 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"title"=>"Sun Yat-Sen Memorial Hall", "photo_url"=>"https://upload.wikimedia.org/wikipedia/commons/c/ce/SYS_Memorial_from_sky.jpg", "description"=>"This is a description", "admission_price"=>"0"}
+  [1m[35mPlace Load (0.3ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html within layouts/application (2.1ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 19:18:00 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/submit_new?title=Taipei+Zoo&photo_url=http%3A%2F%2F4.bp.blogspot.com%2F-va_aCQGvYOs%2FVLyzsV7hvsI%2FAAAAAAAALVw%2F8PLA7tetEY4%2Fs1600%2FIMG_0016.JPG&description=Lots+of+animals&admission_price=200" for 127.0.0.1 at 2015-07-13 19:29:46 -0500
+Processing by PlacesController#create as HTML
+  Parameters: {"title"=>"Taipei Zoo", "photo_url"=>"http://4.bp.blogspot.com/-va_aCQGvYOs/VLyzsV7hvsI/AAAAAAAALVw/8PLA7tetEY4/s1600/IMG_0016.JPG", "description"=>"Lots of animals", "admission_price"=>"200"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)  [["admission_price", 200], ["description", "Lots of animals"], ["photo_url", "http://4.bp.blogspot.com/-va_aCQGvYOs/VLyzsV7hvsI/AAAAAAAALVw/8PLA7tetEY4/s1600/IMG_0016.JPG"], ["title", "Taipei Zoo"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 19:29:46 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.1ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html within layouts/application (0.6ms)
+Completed 200 OK in 17ms (Views: 16.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/28" for 127.0.0.1 at 2015-07-13 19:29:49 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 28 LIMIT 1[0m
+  Rendered places/show.html within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 19:29:55 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.3ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html within layouts/application (1.5ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/places/28/delete" for 127.0.0.1 at 2015-07-13 19:50:34 -0500
+Processing by PlacesController#delete as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 28 LIMIT 1[0m
+  [1m[35mSQL (2.3ms)[0m  DELETE FROM "places" WHERE "places"."id" = 28
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 19:50:34 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html within layouts/application (0.7ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 19:50:36 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html within layouts/application (0.3ms)
+Completed 200 OK in 22ms (Views: 21.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/submit_new?title=Taipei+Zoo&photo_url=http%3A%2F%2F4.bp.blogspot.com%2F-va_aCQGvYOs%2FVLyzsV7hvsI%2FAAAAAAAALVw%2F8PLA7tetEY4%2Fs1600%2FIMG_0016.JPG&description=Lots+of+animals&admission_price=200" for 127.0.0.1 at 2015-07-13 19:50:50 -0500
+Processing by PlacesController#create as HTML
+  Parameters: {"title"=>"Taipei Zoo", "photo_url"=>"http://4.bp.blogspot.com/-va_aCQGvYOs/VLyzsV7hvsI/AAAAAAAALVw/8PLA7tetEY4/s1600/IMG_0016.JPG", "description"=>"Lots of animals", "admission_price"=>"200"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)[0m  [["admission_price", 200], ["description", "Lots of animals"], ["photo_url", "http://4.bp.blogspot.com/-va_aCQGvYOs/VLyzsV7hvsI/AAAAAAAALVw/8PLA7tetEY4/s1600/IMG_0016.JPG"], ["title", "Taipei Zoo"]]
+  [1m[35m (0.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 19:50:50 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html within layouts/application (1.0ms)
+Completed 200 OK in 21ms (Views: 20.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/19" for 127.0.0.1 at 2015-07-13 19:51:36 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1
+  Rendered places/show.html within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/19/edit" for 127.0.0.1 at 2015-07-13 19:51:38 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mPlace Load (0.3ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1[0m
+  Rendered places/edit.html within layouts/application (0.4ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/places/19/edit" for 127.0.0.1 at 2015-07-13 19:55:27 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1
+  Rendered places/edit.html within layouts/application (0.6ms)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 19:55:48 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html within layouts/application (0.8ms)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/19" for 127.0.0.1 at 2015-07-13 19:55:50 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1
+  Rendered places/show.html within layouts/application (0.5ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/19/edit" for 127.0.0.1 at 2015-07-13 19:55:51 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1[0m
+  Rendered places/edit.html within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 19:55:53 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.1ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html within layouts/application (0.8ms)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 19:57:13 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.3ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html within layouts/application (1.0ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/places/19" for 127.0.0.1 at 2015-07-13 19:57:15 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1
+  Rendered places/show.html within layouts/application (0.7ms)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/19/edit" for 127.0.0.1 at 2015-07-13 19:57:18 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1[0m
+  Rendered places/edit.html within layouts/application (0.7ms)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/19/edit" for 127.0.0.1 at 2015-07-13 19:57:51 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1
+  Rendered places/edit.html within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 20:02:38 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html within layouts/application (0.8ms)
+Completed 200 OK in 25ms (Views: 24.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 20:03:03 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.1ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html within layouts/application (0.8ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/19" for 127.0.0.1 at 2015-07-13 20:13:23 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1[0m
+  Rendered places/show.html within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/19/edit" for 127.0.0.1 at 2015-07-13 20:13:26 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1
+  Rendered places/edit.html within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/?title=Sun+Yat-Sen+Memorial+Hall&photo_url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fc%2Fce%2FSYS_Memorial_from_sky.jpg&description=Memorial+hall&admission_price=0" for 127.0.0.1 at 2015-07-13 20:13:35 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"title"=>"Sun Yat-Sen Memorial Hall", "photo_url"=>"https://upload.wikimedia.org/wikipedia/commons/c/ce/SYS_Memorial_from_sky.jpg", "description"=>"Memorial hall", "admission_price"=>"0"}
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html within layouts/application (0.7ms)
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/19" for 127.0.0.1 at 2015-07-13 20:37:56 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1
+  Rendered places/show.html within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/19/edit" for 127.0.0.1 at 2015-07-13 20:37:59 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1[0m
+  Rendered places/edit.html within layouts/application (0.1ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/?title=Sun+Yat-Sen+Memorial+Hall&photo_url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fc%2Fce%2FSYS_Memorial_from_sky.jpg&description=This+is+a+description&admission_price=0" for 127.0.0.1 at 2015-07-13 20:38:27 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"title"=>"Sun Yat-Sen Memorial Hall", "photo_url"=>"https://upload.wikimedia.org/wikipedia/commons/c/ce/SYS_Memorial_from_sky.jpg", "description"=>"This is a description", "admission_price"=>"0"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html within layouts/application (0.9ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 20:39:04 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html within layouts/application (0.0ms)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/submit_new?title=Tamsui&photo_url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F8%2F80%2FTaipei-Tamsui.JPG&description=Riverside&admission_price=0" for 127.0.0.1 at 2015-07-13 20:41:06 -0500
+Processing by PlacesController#create as HTML
+  Parameters: {"title"=>"Tamsui", "photo_url"=>"https://upload.wikimedia.org/wikipedia/commons/8/80/Taipei-Tamsui.JPG", "description"=>"Riverside", "admission_price"=>"0"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)  [["admission_price", 0], ["description", "Riverside"], ["photo_url", "https://upload.wikimedia.org/wikipedia/commons/8/80/Taipei-Tamsui.JPG"], ["title", "Tamsui"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 20:41:06 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.1ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html within layouts/application (0.8ms)
+Completed 200 OK in 18ms (Views: 17.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/30" for 127.0.0.1 at 2015-07-13 20:41:19 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 30 LIMIT 1[0m
+  Rendered places/show.html within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/30/edit" for 127.0.0.1 at 2015-07-13 20:41:21 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"30"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 30 LIMIT 1
+  Rendered places/edit.html within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/?title=Tamsui&photo_url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F8%2F80%2FTaipei-Tamsui.JPG&description=Riverside&admission_price=0" for 127.0.0.1 at 2015-07-13 20:41:22 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"title"=>"Tamsui", "photo_url"=>"https://upload.wikimedia.org/wikipedia/commons/8/80/Taipei-Tamsui.JPG", "description"=>"Riverside", "admission_price"=>"0"}
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html within layouts/application (0.8ms)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/19" for 127.0.0.1 at 2015-07-13 20:41:47 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1
+  Rendered places/show.html within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/19/edit" for 127.0.0.1 at 2015-07-13 20:41:48 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mPlace Load (0.3ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1[0m
+  Rendered places/edit.html within layouts/application (0.4ms)
+Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/places/?title=Sun+Yat-Sen+Memorial+Hall&photo_url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fc%2Fce%2FSYS_Memorial_from_sky.jpg&description=This+is+a+description&admission_price=0" for 127.0.0.1 at 2015-07-13 20:41:49 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"title"=>"Sun Yat-Sen Memorial Hall", "photo_url"=>"https://upload.wikimedia.org/wikipedia/commons/c/ce/SYS_Memorial_from_sky.jpg", "description"=>"This is a description", "admission_price"=>"0"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html within layouts/application (1.1ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/?title=Sun+Yat-Sen+Memorial+Hall&photo_url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fc%2Fce%2FSYS_Memorial_from_sky.jpg&description=This+is+a+description&admission_price=0" for 127.0.0.1 at 2015-07-13 20:42:04 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"title"=>"Sun Yat-Sen Memorial Hall", "photo_url"=>"https://upload.wikimedia.org/wikipedia/commons/c/ce/SYS_Memorial_from_sky.jpg", "description"=>"This is a description", "admission_price"=>"0"}
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html within layouts/application (0.9ms)
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/19" for 127.0.0.1 at 2015-07-13 20:42:06 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1
+  Rendered places/show.html within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/19/edit" for 127.0.0.1 at 2015-07-13 20:42:09 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1[0m
+  Rendered places/edit.html within layouts/application (0.7ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/?title=Sun+Yat-Sen+Memorial+Hall&photo_url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fc%2Fce%2FSYS_Memorial_from_sky.jpg&description=This+is+a+description&admission_price=0" for 127.0.0.1 at 2015-07-13 20:42:10 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"title"=>"Sun Yat-Sen Memorial Hall", "photo_url"=>"https://upload.wikimedia.org/wikipedia/commons/c/ce/SYS_Memorial_from_sky.jpg", "description"=>"This is a description", "admission_price"=>"0"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html within layouts/application (1.3ms)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/?title=Sun+Yat-Sen+Memorial+Hall&photo_url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fc%2Fce%2FSYS_Memorial_from_sky.jpg&description=This+is+a+description&admission_price=0" for 127.0.0.1 at 2015-07-13 21:04:18 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"title"=>"Sun Yat-Sen Memorial Hall", "photo_url"=>"https://upload.wikimedia.org/wikipedia/commons/c/ce/SYS_Memorial_from_sky.jpg", "description"=>"This is a description", "admission_price"=>"0"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html within layouts/application (0.9ms)
+Completed 200 OK in 19ms (Views: 18.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/19" for 127.0.0.1 at 2015-07-13 21:04:20 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1
+  Rendered places/show.html within layouts/application (0.5ms)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/19/edit" for 127.0.0.1 at 2015-07-13 21:04:21 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1[0m
+  Rendered places/edit.html within layouts/application (0.8ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/?title=Sun+Yat-Sen+Memorial+Hall&photo_url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fc%2Fce%2FSYS_Memorial_from_sky.jpg&description=This+is+a+memorial+hall&admission_price=0" for 127.0.0.1 at 2015-07-13 21:04:27 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"title"=>"Sun Yat-Sen Memorial Hall", "photo_url"=>"https://upload.wikimedia.org/wikipedia/commons/c/ce/SYS_Memorial_from_sky.jpg", "description"=>"This is a memorial hall", "admission_price"=>"0"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html within layouts/application (1.2ms)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/19" for 127.0.0.1 at 2015-07-13 21:04:33 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1[0m
+  Rendered places/show.html within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 21:04:35 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.1ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html within layouts/application (0.9ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/19" for 127.0.0.1 at 2015-07-13 21:04:41 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1[0m
+  Rendered places/show.html within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/19/edit" for 127.0.0.1 at 2015-07-13 21:04:43 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1
+  Rendered places/edit.html within layouts/application (0.1ms)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/19/edit" for 127.0.0.1 at 2015-07-13 21:08:10 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1[0m
+  Rendered places/edit.html within layouts/application (0.5ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/?title=Sun+Yat-Sen+Memorial+Hall&photo_url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fc%2Fce%2FSYS_Memorial_from_sky.jpg&description=This+is+a+description&admission_price=0" for 127.0.0.1 at 2015-07-13 21:08:12 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"title"=>"Sun Yat-Sen Memorial Hall", "photo_url"=>"https://upload.wikimedia.org/wikipedia/commons/c/ce/SYS_Memorial_from_sky.jpg", "description"=>"This is a description", "admission_price"=>"0"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html within layouts/application (0.8ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/?title=Sun+Yat-Sen+Memorial+Hall&photo_url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fc%2Fce%2FSYS_Memorial_from_sky.jpg&description=This+is+a+description&admission_price=0" for 127.0.0.1 at 2015-07-13 21:08:32 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"title"=>"Sun Yat-Sen Memorial Hall", "photo_url"=>"https://upload.wikimedia.org/wikipedia/commons/c/ce/SYS_Memorial_from_sky.jpg", "description"=>"This is a description", "admission_price"=>"0"}
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html within layouts/application (0.8ms)
+Completed 200 OK in 19ms (Views: 18.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/19" for 127.0.0.1 at 2015-07-13 21:08:33 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1
+  Rendered places/show.html within layouts/application (0.4ms)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/19/edit" for 127.0.0.1 at 2015-07-13 21:08:36 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1[0m
+  Rendered places/edit.html within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 4ms
+
+SyntaxError (/Users/hwang/Documents/Web Development/week3-homework/app/views/places/edit.html:3: syntax error, unexpected '}', expecting =>
+...put_buffer.append=( {@place.id} );@output_buffer.safe_append...
+...                               ^
+/Users/hwang/Documents/Web Development/week3-homework/app/views/places/edit.html:11: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/hwang/Documents/Web Development/week3-homework/app/views/places/edit.html:13: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/places/edit.html:3: syntax error, unexpected '}', expecting =>
+  app/views/places/edit.html:11: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/places/edit.html:13: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/hwang/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/hwang/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/hwang/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/hwang/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (43.0ms)
+
+
+Started GET "/places/19/edit" for 127.0.0.1 at 2015-07-13 21:08:36 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1
+  Rendered places/edit.html within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 6ms
+
+SyntaxError (/Users/hwang/Documents/Web Development/week3-homework/app/views/places/edit.html:3: syntax error, unexpected '}', expecting =>
+...put_buffer.append=( {@place.id} );@output_buffer.safe_append...
+...                               ^
+/Users/hwang/Documents/Web Development/week3-homework/app/views/places/edit.html:11: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/hwang/Documents/Web Development/week3-homework/app/views/places/edit.html:13: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/places/edit.html:3: syntax error, unexpected '}', expecting =>
+  app/views/places/edit.html:11: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/places/edit.html:13: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/hwang/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /Users/hwang/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/hwang/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/hwang/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (39.6ms)
+
+
+Started GET "/places/19/edit" for 127.0.0.1 at 2015-07-13 21:08:53 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1[0m
+  Rendered places/edit.html within layouts/application (0.7ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/19" for 127.0.0.1 at 2015-07-13 21:08:54 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1
+  Rendered places/show.html within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/19/edit" for 127.0.0.1 at 2015-07-13 21:08:55 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1[0m
+  Rendered places/edit.html within layouts/application (0.1ms)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/?title=Sun+Yat-Sen+Memorial+Hall&photo_url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fc%2Fce%2FSYS_Memorial_from_sky.jpg&description=This+is+a+description&admission_price=0" for 127.0.0.1 at 2015-07-13 21:09:02 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"title"=>"Sun Yat-Sen Memorial Hall", "photo_url"=>"https://upload.wikimedia.org/wikipedia/commons/c/ce/SYS_Memorial_from_sky.jpg", "description"=>"This is a description", "admission_price"=>"0"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html within layouts/application (0.8ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/19" for 127.0.0.1 at 2015-07-13 21:09:04 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1[0m
+  Rendered places/show.html within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/19/edit" for 127.0.0.1 at 2015-07-13 21:09:07 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1
+  Rendered places/edit.html within layouts/application (0.5ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/?title=Sun+Yat-Sen+Memorial+Hall&photo_url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fc%2Fce%2FSYS_Memorial_from_sky.jpg&description=This+is+a+description+test&admission_price=0" for 127.0.0.1 at 2015-07-13 21:09:10 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"title"=>"Sun Yat-Sen Memorial Hall", "photo_url"=>"https://upload.wikimedia.org/wikipedia/commons/c/ce/SYS_Memorial_from_sky.jpg", "description"=>"This is a description test", "admission_price"=>"0"}
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html within layouts/application (0.8ms)
+Completed 200 OK in 18ms (Views: 17.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/19" for 127.0.0.1 at 2015-07-13 21:09:23 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1
+  Rendered places/show.html within layouts/application (0.6ms)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/19/edit" for 127.0.0.1 at 2015-07-13 21:09:32 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1[0m
+  Rendered places/edit.html within layouts/application (0.4ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/19/update?title=Sun+Yat-Sen+Memorial+Hall&photo_url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fc%2Fce%2FSYS_Memorial_from_sky.jpg&description=This+is+a+description+test&admission_price=0" for 127.0.0.1 at 2015-07-13 21:09:37 -0500
+Processing by PlacesController#update as HTML
+  Parameters: {"title"=>"Sun Yat-Sen Memorial Hall", "photo_url"=>"https://upload.wikimedia.org/wikipedia/commons/c/ce/SYS_Memorial_from_sky.jpg", "description"=>"This is a description test", "admission_price"=>"0", "id"=>"19"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "places" SET "description" = ? WHERE "places"."id" = 19  [["description", "This is a description test"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/places/19
+Completed 302 Found in 3ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/places/19" for 127.0.0.1 at 2015-07-13 21:09:37 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 19 LIMIT 1
+  Rendered places/show.html within layouts/application (0.6ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 21:09:55 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html within layouts/application (1.3ms)
+Completed 200 OK in 18ms (Views: 17.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/24" for 127.0.0.1 at 2015-07-13 21:10:08 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 24 LIMIT 1
+  Rendered places/show.html within layouts/application (0.5ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/24/edit" for 127.0.0.1 at 2015-07-13 21:10:09 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 24 LIMIT 1[0m
+  Rendered places/edit.html within layouts/application (0.1ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/24/update?title=National+Palace+Museum&photo_url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fb%2Fb4%2FNationalPalace_MuseumFrontView.jpg&description=Coolest+museum+ever&admission_price=800" for 127.0.0.1 at 2015-07-13 21:10:15 -0500
+Processing by PlacesController#update as HTML
+  Parameters: {"title"=>"National Palace Museum", "photo_url"=>"https://upload.wikimedia.org/wikipedia/commons/b/b4/NationalPalace_MuseumFrontView.jpg", "description"=>"Coolest museum ever", "admission_price"=>"800", "id"=>"24"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 24 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "places" SET "description" = ? WHERE "places"."id" = 24  [["description", "Coolest museum ever"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/places/24
+Completed 302 Found in 2ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/places/24" for 127.0.0.1 at 2015-07-13 21:10:15 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 24 LIMIT 1
+  Rendered places/show.html within layouts/application (0.3ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 21:11:09 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html within layouts/application (0.9ms)
+Completed 200 OK in 18ms (Views: 17.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/24" for 127.0.0.1 at 2015-07-13 21:11:10 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 24 LIMIT 1
+  Rendered places/show.html within layouts/application (0.4ms)
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 21:14:28 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html within layouts/application (0.8ms)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/30" for 127.0.0.1 at 2015-07-13 21:14:29 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 30 LIMIT 1
+  Rendered places/show.html within layouts/application (0.4ms)
+Completed 200 OK in 23ms (Views: 22.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 21:14:33 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html within layouts/application (0.7ms)
+Completed 200 OK in 20ms (Views: 19.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/25" for 127.0.0.1 at 2015-07-13 21:14:34 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 25 LIMIT 1
+  Rendered places/show.html within layouts/application (0.4ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/25/edit" for 127.0.0.1 at 2015-07-13 21:14:35 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 25 LIMIT 1[0m
+  Rendered places/edit.html within layouts/application (0.1ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/25/update?title=Taipei+101&photo_url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fc%2Fc9%2FTaipei101.portrait.altonthompson.jpg&description=Once+upon+a+time+the+tallest+building+in+the+world&admission_price=1600" for 127.0.0.1 at 2015-07-13 21:14:45 -0500
+Processing by PlacesController#update as HTML
+  Parameters: {"title"=>"Taipei 101", "photo_url"=>"https://upload.wikimedia.org/wikipedia/commons/c/c9/Taipei101.portrait.altonthompson.jpg", "description"=>"Once upon a time the tallest building in the world", "admission_price"=>"1600", "id"=>"25"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 25 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "places" SET "description" = ? WHERE "places"."id" = 25  [["description", "Once upon a time the tallest building in the world"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/places/25
+Completed 302 Found in 3ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/places/25" for 127.0.0.1 at 2015-07-13 21:14:45 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 25 LIMIT 1
+  Rendered places/show.html within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 21:15:01 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html within layouts/application (1.0ms)
+Completed 200 OK in 23ms (Views: 22.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/26" for 127.0.0.1 at 2015-07-13 21:16:11 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 26 LIMIT 1
+  Rendered places/show.html within layouts/application (0.5ms)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/26/edit" for 127.0.0.1 at 2015-07-13 21:17:10 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 26 LIMIT 1[0m
+  Rendered places/edit.html within layouts/application (0.1ms)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/26/update?title=Chiang+Kai-Shek+Memorial+Hall&photo_url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fd%2Fd2%2FChiang_Kai-shek_memorial_amk.jpg&description=Memorial+hall&admission_price=0" for 127.0.0.1 at 2015-07-13 21:17:14 -0500
+Processing by PlacesController#update as HTML
+  Parameters: {"title"=>"Chiang Kai-Shek Memorial Hall", "photo_url"=>"https://upload.wikimedia.org/wikipedia/commons/d/d2/Chiang_Kai-shek_memorial_amk.jpg", "description"=>"Memorial hall", "admission_price"=>"0", "id"=>"26"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 26 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "places" SET "photo_url" = ? WHERE "places"."id" = 26  [["photo_url", "https://upload.wikimedia.org/wikipedia/commons/d/d2/Chiang_Kai-shek_memorial_amk.jpg"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/places/26
+Completed 302 Found in 3ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/places/26" for 127.0.0.1 at 2015-07-13 21:17:14 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 26 LIMIT 1
+  Rendered places/show.html within layouts/application (0.4ms)
+Completed 200 OK in 19ms (Views: 18.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 21:17:51 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html within layouts/application (1.0ms)
+Completed 200 OK in 21ms (Views: 20.5ms | ActiveRecord: 0.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (2.8ms)[0m  DELETE FROM "places"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)  [["admission_price", 800], ["description", "An antique museum with a collection of ancient Chinese imperial artifacts and artworks"], ["photo_url", "https://upload.wikimedia.org/wikipedia/commons/b/b4/NationalPalace_MuseumFrontView.jpg"], ["title", "National Palace Museum"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)[0m  [["admission_price", 1600], ["description", "A landmark skyscraper that held the title of world's tallest building in 2004-2010"], ["photo_url", "https://upload.wikimedia.org/wikipedia/commons/c/c9/Taipei101.portrait.altonthompson.jpg"], ["title", "Taipei 101"]]
+  [1m[35m (0.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)  [["admission_price", 0], ["description", "A national monument erected in memory of the former President of the Republic of China"], ["photo_url", "https://upload.wikimedia.org/wikipedia/commons/d/d2/Chiang_Kai-shek_memorial_amk.jpg"], ["title", "Chiang Kai-Shek Memorial Hall"]]
+  [1m[36m (0.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)[0m  [["admission_price", 0], ["description", "A memorial for the National Father of the Republic of China"], ["photo_url", "https://upload.wikimedia.org/wikipedia/commons/c/ce/SYS_Memorial_from_sky.jpg"], ["title", "Sun Yat-Sen Memorial Hall"]]
+  [1m[35m (0.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)  [["admission_price", 100], ["description", "The first museum in Taiwan built for contemporary art exhibitions"], ["photo_url", "https://upload.wikimedia.org/wikipedia/commons/6/64/Taipei-fine-arts-museum.jpg"], ["title", "Taipei Fine Arts Museum"]]
+  [1m[36m (0.4ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 21:24:05 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.9ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html within layouts/application (7.1ms)
+Completed 200 OK in 76ms (Views: 55.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/places/31" for 127.0.0.1 at 2015-07-13 21:24:09 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 31 LIMIT 1
+  Rendered places/show.html within layouts/application (7.6ms)
+Completed 200 OK in 34ms (Views: 26.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 21:24:17 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html within layouts/application (1.3ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/32" for 127.0.0.1 at 2015-07-13 21:24:18 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 32 LIMIT 1
+  Rendered places/show.html within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 21:24:29 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html within layouts/application (0.7ms)
+Completed 200 OK in 24ms (Views: 23.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/33" for 127.0.0.1 at 2015-07-13 21:24:30 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 33 LIMIT 1
+  Rendered places/show.html within layouts/application (0.6ms)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 21:24:42 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html within layouts/application (1.2ms)
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/34" for 127.0.0.1 at 2015-07-13 21:24:43 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 34 LIMIT 1
+  Rendered places/show.html within layouts/application (0.4ms)
+Completed 200 OK in 29ms (Views: 27.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/34" for 127.0.0.1 at 2015-07-13 21:24:54 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 34 LIMIT 1[0m
+  Rendered places/show.html within layouts/application (0.8ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 21:25:06 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html within layouts/application (0.8ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/35" for 127.0.0.1 at 2015-07-13 21:25:07 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 35 LIMIT 1[0m
+  Rendered places/show.html within layouts/application (0.4ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 21:25:19 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.1ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html within layouts/application (0.8ms)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/32" for 127.0.0.1 at 2015-07-13 21:25:20 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 32 LIMIT 1[0m
+  Rendered places/show.html within layouts/application (0.4ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/32/edit" for 127.0.0.1 at 2015-07-13 21:25:25 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"32"}
+  [1m[35mPlace Load (0.1ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id" = 32 LIMIT 1
+  Rendered places/edit.html within layouts/application (1.2ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/places/32/update?title=Taipei+101&photo_url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fc%2Fc9%2FTaipei101.portrait.altonthompson.jpg&description=A+landmark+skyscraper+that+held+the+title+of+world%27s+tallest+building+from+2004-2010&admission_price=1600" for 127.0.0.1 at 2015-07-13 21:25:35 -0500
+Processing by PlacesController#update as HTML
+  Parameters: {"title"=>"Taipei 101", "photo_url"=>"https://upload.wikimedia.org/wikipedia/commons/c/c9/Taipei101.portrait.altonthompson.jpg", "description"=>"A landmark skyscraper that held the title of world's tallest building from 2004-2010", "admission_price"=>"1600", "id"=>"32"}
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 32 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "places" SET "description" = ? WHERE "places"."id" = 32[0m  [["description", "A landmark skyscraper that held the title of world's tallest building from 2004-2010"]]
+  [1m[35m (0.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/places/32
+Completed 302 Found in 4ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/places/32" for 127.0.0.1 at 2015-07-13 21:25:35 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 32 LIMIT 1[0m
+  Rendered places/show.html within layouts/application (0.4ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 21:25:57 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html within layouts/application (1.0ms)
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 21:26:01 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/submit_new?title=Taipei+Zoo&photo_url=http%3A%2F%2F4.bp.blogspot.com%2F-va_aCQGvYOs%2FVLyzsV7hvsI%2FAAAAAAAALVw%2F8PLA7tetEY4%2Fs1600%2FIMG_0016.JPG&description=Lots+of+animals&admission_price=200" for 127.0.0.1 at 2015-07-13 21:26:15 -0500
+Processing by PlacesController#create as HTML
+  Parameters: {"title"=>"Taipei Zoo", "photo_url"=>"http://4.bp.blogspot.com/-va_aCQGvYOs/VLyzsV7hvsI/AAAAAAAALVw/8PLA7tetEY4/s1600/IMG_0016.JPG", "description"=>"Lots of animals", "admission_price"=>"200"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)  [["admission_price", 200], ["description", "Lots of animals"], ["photo_url", "http://4.bp.blogspot.com/-va_aCQGvYOs/VLyzsV7hvsI/AAAAAAAALVw/8PLA7tetEY4/s1600/IMG_0016.JPG"], ["title", "Taipei Zoo"]]
+  [1m[36m (0.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 21:26:15 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html within layouts/application (0.9ms)
+Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/36" for 127.0.0.1 at 2015-07-13 21:26:19 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id" = 36 LIMIT 1[0m
+  Rendered places/show.html within layouts/application (0.5ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 21:27:14 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.1ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html within layouts/application (0.9ms)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.1ms)
